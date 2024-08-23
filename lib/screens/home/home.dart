@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          GoPremuim(),
+          const Expanded(child: GoPremuim(),),
           Container(
             padding: const EdgeInsets.all(15),
             child: const Text(
@@ -97,8 +97,10 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       elevation: 0,
       title: Row(
-        children: [
-          Container(
+        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          SizedBox(
             height: 45,
             width: 45,
             child: ClipRRect(
@@ -107,12 +109,14 @@ class HomePage extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 10),
-          const Text(
-            'Hi, Dede',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 26,
-              fontWeight: FontWeight.bold,
+          const Expanded(
+            child: Text(
+              'Hi, Dede',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ],
