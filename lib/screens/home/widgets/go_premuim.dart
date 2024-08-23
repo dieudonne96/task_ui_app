@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
 class GoPremuim extends StatelessWidget {
+  const GoPremuim({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Stack(
         children: [
           Container(
-            margin: EdgeInsets.all(15),
-            padding: EdgeInsets.all(20),
+            margin: const EdgeInsets.all(15),
+            padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
               color: Colors.black,
               borderRadius: BorderRadius.circular(20),
@@ -17,22 +19,22 @@ class GoPremuim extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                     color: Colors.grey[800],
                     shape: BoxShape.circle,
                   ),
-                  child: Icon(
+                  child: const Icon(
                     Icons.star,
                     color: Colors.white,
                     size: 20,
                   ),
                 ),
-                SizedBox(width: 15),
+                const SizedBox(width: 15),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'Go Premium',
                       style: TextStyle(
                         fontSize: 18,
@@ -40,7 +42,7 @@ class GoPremuim extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Text(
                       'Get unlimited access\nto all our features!',
                       style: TextStyle(
@@ -58,12 +60,12 @@ class GoPremuim extends StatelessWidget {
             bottom: 15,
             right: 15,
             child: Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_forward,
                 color: Colors.white,
               ),

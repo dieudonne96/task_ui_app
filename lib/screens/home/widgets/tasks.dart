@@ -8,10 +8,10 @@ class Tasks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 15),
       child: GridView.builder(
           itemCount: tasksList.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             crossAxisSpacing: 10,
             mainAxisSpacing: 10,
@@ -25,11 +25,11 @@ class Tasks extends StatelessWidget {
   Widget _buildAddTask() {
     return DottedBorder(
       borderType: BorderType.RRect,
-      radius: Radius.circular(20),
+      radius: const Radius.circular(20),
       dashPattern: [10, 10],
       color: Colors.grey,
       strokeWidth: 2,
-      child: Center(
+      child: const Center(
         child: Text(
           '+ Add',
           style: TextStyle(
@@ -43,7 +43,7 @@ class Tasks extends StatelessWidget {
 
   Widget _buildTask(BuildContext context, Task tasksList) {
     return Container(
-      padding: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: tasksList.bgColor,
         borderRadius: BorderRadius.circular(20),
@@ -56,20 +56,20 @@ class Tasks extends StatelessWidget {
             color: tasksList.iconColor,
             size: 35,
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Text(
             tasksList.title!,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Row(
             children: [
               _buildTaskStatus(tasksList.btnColor!, tasksList.iconColor!,
                   '${tasksList.left} left'),
-              SizedBox(width: 15),
+              const SizedBox(width: 15),
               _buildTaskStatus(
                   Colors.white, tasksList.iconColor!, '${tasksList.done} done'),
             ],
@@ -81,7 +81,7 @@ class Tasks extends StatelessWidget {
 
   Widget _buildTaskStatus(Color bgColor, Color txColor, String text) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       decoration: BoxDecoration(
           color: bgColor, borderRadius: BorderRadius.circular(20)),
       child: Text(

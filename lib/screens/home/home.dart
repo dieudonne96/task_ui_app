@@ -3,6 +3,8 @@ import 'package:task_ui_app/screens/home/widgets/go_premuim.dart';
 import 'package:task_ui_app/screens/home/widgets/tasks.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,8 +15,8 @@ class HomePage extends StatelessWidget {
         children: [
           GoPremuim(),
           Container(
-            padding: EdgeInsets.all(15),
-            child: Text(
+            padding: const EdgeInsets.all(15),
+            child: const Text(
               'Tasks',
               style: TextStyle(
                 fontSize: 22,
@@ -36,7 +38,7 @@ class HomePage extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.black,
         onPressed: () {},
-        child: Icon(
+        child: const Icon(
           Icons.add,
           size: 35,
         ),
@@ -47,7 +49,7 @@ class HomePage extends StatelessWidget {
   Widget _buildBottomNavigationBar() {
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
           ),
@@ -59,7 +61,7 @@ class HomePage extends StatelessWidget {
             ),
           ]),
       child: ClipRRect(
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(30),
           topRight: Radius.circular(30),
         ),
@@ -69,7 +71,7 @@ class HomePage extends StatelessWidget {
           showUnselectedLabels: false,
           selectedItemColor: Colors.blueAccent,
           unselectedItemColor: Colors.grey.withOpacity(0.5),
-          items: [
+          items: const [
             BottomNavigationBarItem(
               label: 'Home',
               icon: Icon(
@@ -105,7 +107,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 10),
-          Text(
+          const Text(
             'Hi, Dede',
             style: TextStyle(
               color: Colors.black,
@@ -115,7 +117,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      actions: [
+      actions: const [
         Icon(
           Icons.more_vert,
           color: Colors.black,
